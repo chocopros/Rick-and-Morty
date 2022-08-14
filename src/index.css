@@ -334,7 +334,7 @@ header form {
         justify-content: center;
         align-items: center;
         
-        height: 600px;
+        height: 400px;;
    
         background: url(/src/assets/img/LOGO-Vmovil.jpg) ;
         background-size: cover;
@@ -344,7 +344,7 @@ header form {
     }
 
     header form {
-        left: 18%; 
+        left: 21%;  
 
     }
 
@@ -357,15 +357,13 @@ header form {
 }
 
 
-@media (max-width: 375px) {
-
-    .hero__header{
-        height: 400px;
-    }
+@media (max-width: 320px) {
 
     header form {
-        left: 14%; 
+        left: 17%;  
 
     }
+
+
 
 }
