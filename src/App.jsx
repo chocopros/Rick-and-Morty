@@ -3,6 +3,7 @@ import axios from 'axios'
 import './App.css'
 import LocationCard from './components/LocationCard'
 import Card_resident from './components/Card_resident'
+import Footer from './components/Footer'
 
 function App() {
 
@@ -56,6 +57,7 @@ function App() {
           ))
         }
       </div>
+      <Footer/>  
     </div>
   )
 }
