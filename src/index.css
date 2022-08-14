@@ -98,6 +98,10 @@ header form {
     font-size: clamp(14px, 5vw, 30px);
 }
 
+.location-card span{
+    font-weight: bold;
+}
+
 .location-card ul{
     
     width: 90%;
@@ -205,6 +209,9 @@ header form {
     color:white;
     list-style: none;
     font-size: 1.2rem;
+}
+.card_list span{
+    font-weight: bold;
 }
 
 .card_container_loader{

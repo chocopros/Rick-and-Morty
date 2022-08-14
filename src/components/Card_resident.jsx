@@ -34,8 +34,8 @@ const Card_resident = ({url,loading}) => {
              <div className="card_info">
                <h2>{resident?.name}</h2>
                <ul className='card_list'>
-                 <li>Origen Name: {resident?.origin.name}</li>
-                 <li>Episode: {resident?.episode.length}</li>
+                 <li><span>Origen Name: </span>{resident?.origin.name}</li>
+                 <li><span>Episode: </span>{resident?.episode.length}</li>
                </ul>
              </div>
            </div>
