@@ -1,0 +1,342 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
+}
+body{
+    min-width: 320px;
+    
+}
+html{
+    min-width: 320px; 
+}
+.App{
+
+    min-width: 320px;
+    width: 100%;
+    height: 100%;
+
+    background-image: url('https://i.gifer.com/origin/58/5888d7b2696e39f2be7b972622348632.gif');
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero__header{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    max-width: 1400px;
+
+    width: 95%;
+    height: 400px;
+
+    background: url(/src/assets/img/LOGO.jpg) ;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: relative;
+    border-radius: 30px;
+
+}
+
+header form {
+
+    color: white;
+    position: absolute;
+    left: 12%;
+    bottom:35%;
+    display: flex;
+    width: 20%;  
+
+}
+
+.inputSearch{
+    height: 2.35em;
+    width: 100%;
+    padding: 5px 5px 5px 15px;
+    color: #e6e5e5;
+    background-color: #fff3;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+}
+
+.inputSearch:hover{
+    border: 2px solid rgb(70, 181, 245);
+    box-shadow: 1px 1px 30px rgb(156, 247, 19);
+}
+
+/*************************** LOCATION *******************************/
+.location-card{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+    max-width: 1400px;
+    height: 200px;
+    width: 80%;
+    margin: 25px 0;
+
+    color: white;
+    
+    background-color: rgba(1, 33, 5, 0.762);
+    border-radius: 15px;
+    box-shadow: 1px 1px 30px 1px rgb(30, 246, 10);
+}
+
+.location-card h1{
+    font-size: clamp(14px, 5vw, 30px);
+}
+
+.location-card ul{
+    
+    width: 90%;
+    
+    list-style: none;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+    
+
+    font-size: clamp(12px, 3vw, 25px);
+    margin: 0 25px;
+    
+}
+
+/******** CARD CONTAINER ****************/
+
+.container_residents{
+    display: flex;
+    justify-content: center;
+    gap:80px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    max-width: 1400px;
+}
+
+.card_container{
+    border: 1px solid white;
+    width: 300px;
+    height: 400px;
+    border-radius: 10%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: rgba(26, 255, 10, 0.18);
+    
+}
+
+.card_container:hover{
+    box-shadow: 1px 1px 30px 1px rgb(30, 246, 10);
+    
+}
+
+.card_container_loader{
+    background-image: url(./img/rick-and-morty-rick.gif);
+}
+.card_img{
+    width: 300px;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+    border-top-left-radius: 10px;
+    border-top-right-radius:  10px;
+}
+
+.card_img img{
+    width:300px;
+    height: 250px;
+}
+
+.card_status{
+    color: white;
+    position: absolute;
+    background-color:  rgba(5, 4, 4, 0.318);
+    top:40px;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    padding: 8px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius:5px;
+    display: flex;
+    align-items: center;
+    gap:5px;
+}
+.circle{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: white;
+}
+.card_info{
+    margin-top: 15px;
+}
+
+.card_info h2{
+    color: white;
+    margin-left: 20px;
+}
+
+
+.card_list{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    margin: 20px 20px;
+}
+.card_list li{
+    color:white;
+    list-style: none;
+    font-size: 1.2rem;
+}
+
+.card_container_loader{
+    background-image: url(./assets/img/Loader-card.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid white;
+    width: 300px;
+    height: 400px;
+    border-radius: 10%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;  
+    box-shadow: 1px 1px 30px 1px rgb(30, 246, 10);
+}
+
+
+
+
+/**************** MEDIAS ************/ 
+
+@media (max-width: 1024px) {
+
+    .hero__header{
+        height: 300px;
+    }
+
+    header form {
+        left: 12%;
+        bottom:35%;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .hero__header{
+        margin-top: 15px;
+        height: 200px;
+    }
+
+    header form {
+        left: 7%;
+        bottom:35%;
+        
+    }
+
+    .inputSearch{
+        width: 300px;
+        height: 20px;
+        font-size: 16px;
+    }
+
+    .location-card{
+        height: 180px;
+        
+    }
+    
+}
+
+@media (max-width: 525px) {
+
+    .hero__header{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        height: 600px;
+      
+        background: url(/src/assets/img/LOGO-Vmovil.jpg) ;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+    }
+
+    header form {
+        
+        bottom:40%;
+        left: 22%;
+        
+    }
+
+    .inputSearch{
+    
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .card_container{
+        
+        width: 250px;
+        height: 350px;
+    }
+    
+}
+
+@media (max-width: 375px) {
+
+    .hero__header{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        height: 600px;
+   
+        background: url(/src/assets/img/LOGO-Vmovil.jpg) ;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+    }
+
+    header form {
+        left: 18%; 
+
+    }
+
+    .inputSearch{
+    
+        height: 40px;
+        font-size: 16px;
+    }
+
+}
+
+
+@media (max-width: 375px) {
+
+    .hero__header{
+        height: 400px;
+    }
+
+    header form {
+        left: 14%; 
+
+    }
+
+}
