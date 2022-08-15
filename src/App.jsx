@@ -4,12 +4,17 @@ import './App.css'
 import LocationCard from './components/LocationCard'
 import Card_resident from './components/Card_resident'
 import Footer from './components/Footer'
+import Pagination from './components/Pagination'
 
 function App() {
 
   const [location, setLocation] = useState()
   const [searchInput, setSearchInput] = useState('')
   const [loading, setLoading] = useState(true)
+  const [pagina, setPagina] = useState(1)
+  const [porPagina, setPorPagina] = useState(9)
+
+  const maximo = Math.ceil(location?.residents.length / porPagina)
 
   useEffect(()=>{
 
@@ -43,19 +48,24 @@ function App() {
     <div className="App">
       <header className='hero__header'>
         <form onSubmit={handleSubmit} className='header_'>
-          <input id="search" className='inputSearch' type="text" placeholder='Consult of Location, here' />
+          <input id="search" className='inputSearch' type="number" placeholder='Consult of Location, here' />
         </form>
       </header>
       <LocationCard location={location}/>
-  
       <div className='container_residents'>
         {
-          location?.residents.map(url=>(
+          location?.residents.slice(
+            (pagina -1)* porPagina,
+            (pagina -1) * porPagina + porPagina
+          ).map(url=>(
           <Card_resident 
           key={url} url={url}
           />
           ))
         }
+      </div>
+      <div className='conteiner-Pagination'>
+      <Pagination pagina={pagina} setPagina={setPagina} maximo={maximo}/>
       </div>
       <Footer/>  
     </div>
